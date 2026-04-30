@@ -1,2 +1,2 @@
 # TN-portfolio
-my portfolio a website
+my portfolio website
