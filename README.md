@@ -1,4 +1,4 @@
-# TN-portfolio
+# My Portfolio Website
 
 A lightweight vanilla HTML, CSS, and JavaScript portfolio starter.
 
