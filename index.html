@@ -5,119 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="A personal portfolio for showcasing projects, experience, and contact information."
+      content="Tyler portfolio, projects, links, and contact information."
     >
     <title>Tyler Nelson | Portfolio</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#home" aria-label="Tyler Nelson home">
-        <span class="brand-mark">TN</span>
-        <span>Tyler Nelson</span>
+    <header class="topbar">
+      <a class="avatar-link" href="#top" aria-label="Tyler Nelson home">
+        <img src="assets/character-standing.png" alt="">
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-        <span class="sr-only">Toggle navigation</span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#top" aria-current="page">Home</a>
+        <a href="#info">Info</a>
+        <a href="#work">Work</a>
+        <a href="#play">Play</a>
       </nav>
+
+      <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">in</a>
     </header>
 
-    <main id="home">
-      <section class="hero section">
-        <div class="hero-copy">
-          <p class="eyebrow">Portfolio</p>
-          <h1>Building thoughtful web experiences with clean, practical code.</h1>
-          <p class="hero-text">
-            I am a developer focused on accessible interfaces, durable frontend foundations,
-            and projects that feel simple to use because the details are handled well.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#projects">View projects</a>
-            <a class="button secondary" href="mailto:hello@example.com">Get in touch</a>
-          </div>
-        </div>
+    <main class="room" id="top">
+      <div class="back-wall" aria-hidden="true">
+        <span class="door"></span>
+      </div>
+      <div class="floor" aria-hidden="true"></div>
 
-        <div class="hero-visual" aria-label="Portfolio preview">
-          <div class="profile-panel">
-            <img src="assets/profile-placeholder.svg" alt="Abstract profile artwork">
-            <div>
-              <p class="panel-label">Currently</p>
-              <p>Designing and building responsive web applications.</p>
-            </div>
-          </div>
-          <div class="stats-grid" aria-label="Highlights">
-            <div>
-              <strong>03</strong>
-              <span>Featured projects</span>
-            </div>
-            <div>
-              <strong>100%</strong>
-              <span>Vanilla stack</span>
-            </div>
-            <div>
-              <strong>CSS</strong>
-              <span>Responsive layouts</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <div class="section-heading">
-          <p class="eyebrow">Selected Work</p>
-          <h2>Projects</h2>
-        </div>
-        <div id="project-grid" class="project-grid" aria-live="polite"></div>
-      </section>
-
-      <section id="about" class="section split-section">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>A frontend foundation ready for your story.</h2>
-        </div>
-        <div class="content-stack">
-          <p>
-            This starter portfolio is intentionally lightweight: semantic HTML, organized CSS,
-            and a small JavaScript file for interactive navigation and project rendering.
-          </p>
-          <p>
-            Replace this copy with your bio, add real project links, and drop in your own
-            photo or artwork when you are ready.
-          </p>
-          <ul class="skill-list" aria-label="Skills">
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Accessibility</li>
-            <li>Responsive Design</li>
-          </ul>
-        </div>
-      </section>
-
-      <section id="contact" class="section contact-section">
-        <p class="eyebrow">Contact</p>
-        <h2>Have a project, role, or collaboration in mind?</h2>
-        <p>
-          Send a note and make it easy for people to reach you from the first version of
-          the site.
-        </p>
-        <a class="button primary" href="mailto:hello@example.com">hello@example.com</a>
+      <section class="character-scene" id="info" aria-label="About Tyler Nelson">
+        <h1 class="speech-bubble">
+          Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit.
+        </h1>
+        <figure class="character-frame">
+          <img src="assets/character-standing.png" alt="A stylized character waving">
+        </figure>
       </section>
     </main>
 
+    <section class="drawer" id="work" aria-labelledby="projects-title">
+      <div class="drawer-inner">
+        <p class="kicker">selected work</p>
+        <h2 id="projects-title">Projects</h2>
+        <div class="project-list">
+          <article>
+            <span>01</span>
+            <div>
+              <h3>Project One</h3>
+              <p>Replace this with a short case study, live link, or repository.</p>
+            </div>
+          </article>
+          <article>
+            <span>02</span>
+            <div>
+              <h3>Project Two</h3>
+              <p>Add the problem you solved, the stack you used, and what changed.</p>
+            </div>
+          </article>
+          <article>
+            <span>03</span>
+            <div>
+              <h3>Project Three</h3>
+              <p>Keep these entries brief so the minimal style stays intentional.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="drawer drawer-light" id="play" aria-labelledby="play-title">
+      <div class="drawer-inner">
+        <p class="kicker">extras</p>
+        <h2 id="play-title">Play</h2>
+        <p class="intro-copy">
+          A spot for experiments, sketches, tiny tools, and anything else worth sharing.
+        </p>
+      </div>
+    </section>
+
     <footer class="site-footer">
-      <p>&copy; <span id="year"></span> Tyler Nelson. All rights reserved.</p>
-      <a href="#home">Back to top</a>
+      <span>&copy; <span id="year"></span> Tyler N</span>
+      <a href="#top">back to room</a>
     </footer>
 
     <script src="script.js"></script>
