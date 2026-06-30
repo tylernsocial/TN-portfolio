@@ -7,13 +7,32 @@
       name="description"
       content="Tyler portfolio, projects, links, and contact information."
     >
-    <title>Tyler Nelson | Portfolio</title>
+    <title>Tyler Nguyen | Portfolio</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="IntroVideo.css">
   </head>
-  <body>
+  <body class="intro-active">
+    <section id="intro-video" class="intro-video" aria-label="Portfolio introduction">
+      <video
+        class="intro-video__media"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+        aria-hidden="true"
+      >
+        <source src="/videos/portfolio-intro.mp4" type="video/mp4">
+      </video>
+
+      <button class="intro-video__enter" type="button" hidden>
+        Enter Portfolio
+      </button>
+    </section>
+
+    <div id="portfolio-content" class="portfolio-content" aria-hidden="true" inert>
     <header class="topbar">
-      <a class="avatar-link" href="#top" aria-label="Tyler Nelson home">
+      <a class="avatar-link" href="#top" aria-label="Tyler Nguyen home">
         <img src="assets/character-standing.png" alt="">
       </a>
 
@@ -33,7 +52,7 @@
       </div>
       <div class="floor" aria-hidden="true"></div>
 
-      <section class="character-scene" id="info" aria-label="About Tyler Nelson">
+      <section class="character-scene" id="info" aria-label="About Tyler Nguyen">
         <h1 class="speech-bubble">
           Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit.
         </h1>
@@ -83,11 +102,30 @@
       </div>
     </section>
 
-    <footer class="site-footer">
-      <span>&copy; <span id="year"></span> Tyler N</span>
+    <section class="drawer" id="resume" aria-labelledby="resume-title">
+      <div class="drawer-inner">
+        <p class="kicker">experience</p>
+        <h2 id="resume-title">Resume</h2>
+        <p class="intro-copy">
+          Add a resume download or a concise overview of your experience here.
+        </p>
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact">
+      <span>&copy; <span id="year"></span> Tyler Nguyen</span>
       <a href="#top">back to room</a>
     </footer>
+    </div>
 
+    <script src="IntroVideo.js"></script>
     <script src="script.js"></script>
+    <noscript>
+      <style>
+        .intro-video { display: none; }
+        .portfolio-content { opacity: 1; }
+        body.intro-active { height: auto; overflow: auto; }
+      </style>
+    </noscript>
   </body>
 </html>

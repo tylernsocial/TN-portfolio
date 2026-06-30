@@ -1,0 +1,84 @@
+/* Full-viewport video intro. Change the background here to light gray if preferred. */
+.intro-video {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+  background: #000;
+}
+
+body.intro-active {
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+.intro-video__media {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  border: 0;
+  object-fit: cover;
+}
+
+.intro-video__enter {
+  position: absolute;
+  left: 50%;
+  bottom: max(2rem, env(safe-area-inset-bottom));
+  z-index: 1;
+  min-height: 2.8rem;
+  padding: 0.65rem 1.25rem;
+  border: 1px solid rgb(255 255 255 / 70%);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 72%);
+  box-shadow: 0 0.4rem 1rem rgb(0 0 0 / 28%);
+  color: #fff;
+  font: 600 0.9rem/1 Arial, sans-serif;
+  cursor: pointer;
+  opacity: 0;
+  transform: translate(-50%, 0.5rem);
+}
+
+.intro-video--needs-entry .intro-video__enter {
+  animation: intro-enter-button 300ms ease-out forwards;
+}
+
+.intro-video__enter:hover {
+  background: rgb(30 30 30 / 88%);
+}
+
+.intro-video__enter:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
+.intro-video--exiting {
+  pointer-events: none;
+  animation: intro-video-out 500ms ease-in forwards;
+}
+
+@keyframes intro-enter-button {
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes intro-video-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro-video--exiting {
+    animation-duration: 1ms;
+  }
+
+  .intro-video--needs-entry .intro-video__enter {
+    animation-duration: 1ms;
+  }
+}

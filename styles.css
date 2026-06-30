@@ -32,6 +32,25 @@ body {
   font-family: var(--body);
 }
 
+.portfolio-content {
+  opacity: 0;
+}
+
+.portfolio-content--visible {
+  opacity: 1;
+  transition: opacity 600ms ease-out 180ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .portfolio-content--visible {
+    transition-duration: 1ms;
+  }
+}
+
 img {
   display: block;
   max-width: 100%;
