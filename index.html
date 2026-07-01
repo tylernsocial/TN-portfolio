@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta
       name="description"
-      content="Tyler portfolio, projects, links, and contact information."
+      content="Tyler Nguyen — computer science portfolio and selected work."
     >
     <title>Tyler Nguyen | Portfolio</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="IntroVideo.css">
   </head>
   <body class="intro-active">
+    <!-- Full-screen video and sound intro. -->
     <section id="intro-video" class="intro-video" aria-label="Portfolio introduction">
       <video
         class="intro-video__media"
@@ -39,91 +40,37 @@
     </section>
 
     <div id="portfolio-content" class="portfolio-content" aria-hidden="true" inert>
-    <header class="topbar">
-      <a class="avatar-link" href="#top" aria-label="Tyler Nguyen home">
-        <img src="assets/character-standing.png" alt="">
-      </a>
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="Tyler Nguyen, home">TN<span>.</span></a>
+      </header>
 
-      <nav class="main-nav" aria-label="Primary navigation">
-        <a href="#top" aria-current="page">Home</a>
-        <a href="#info">Info</a>
-        <a href="#work">Work</a>
-        <a href="#play">Play</a>
-      </nav>
+      <main id="top">
+        <section class="hero" aria-labelledby="page-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Computer Science Portfolio / 2026</p>
+            <h1 id="page-title">Tyler<br>Nguyen<span>.</span></h1>
+            <p class="hero-intro" id="about">
+              Computer science student interested in building useful, thoughtful software.
+              This is a simple home for my work and experiments.
+            </p>
+          </div>
 
-      <a class="social-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">in</a>
-    </header>
+          <!-- Replace the placeholder URLs and email below with your own. -->
+          <nav class="link-list" aria-label="Portfolio links">
+            <a href="#about"><span>01</span>About <b aria-hidden="true">↘</b></a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer"><span>02</span>Projects <b aria-hidden="true">↗</b></a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer"><span>03</span>GitHub <b aria-hidden="true">↗</b></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><span>04</span>LinkedIn <b aria-hidden="true">↗</b></a>
+            <a href="mailto:hello@example.com"><span>05</span>Email <b aria-hidden="true">↗</b></a>
+            <a href="#"><span>06</span>Resume <b aria-hidden="true">↗</b></a>
+          </nav>
+        </section>
+      </main>
 
-    <main class="room" id="top">
-      <div class="back-wall" aria-hidden="true">
-        <span class="door"></span>
-      </div>
-      <div class="floor" aria-hidden="true"></div>
-
-      <section class="character-scene" id="info" aria-label="About Tyler Nguyen">
-        <h1 class="speech-bubble">
-          Lorem ipsum dolor sit amet, <span>consectetur</span> adipiscing elit.
-        </h1>
-        <figure class="character-frame">
-          <img src="assets/character-standing.png" alt="A stylized character waving">
-        </figure>
-      </section>
-    </main>
-
-    <section class="drawer" id="work" aria-labelledby="projects-title">
-      <div class="drawer-inner">
-        <p class="kicker">selected work</p>
-        <h2 id="projects-title">Projects</h2>
-        <div class="project-list">
-          <article>
-            <span>01</span>
-            <div>
-              <h3>Project One</h3>
-              <p>Replace this with a short case study, live link, or repository.</p>
-            </div>
-          </article>
-          <article>
-            <span>02</span>
-            <div>
-              <h3>Project Two</h3>
-              <p>Add the problem you solved, the stack you used, and what changed.</p>
-            </div>
-          </article>
-          <article>
-            <span>03</span>
-            <div>
-              <h3>Project Three</h3>
-              <p>Keep these entries brief so the minimal style stays intentional.</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="drawer drawer-light" id="play" aria-labelledby="play-title">
-      <div class="drawer-inner">
-        <p class="kicker">extras</p>
-        <h2 id="play-title">Play</h2>
-        <p class="intro-copy">
-          A spot for experiments, sketches, tiny tools, and anything else worth sharing.
-        </p>
-      </div>
-    </section>
-
-    <section class="drawer" id="resume" aria-labelledby="resume-title">
-      <div class="drawer-inner">
-        <p class="kicker">experience</p>
-        <h2 id="resume-title">Resume</h2>
-        <p class="intro-copy">
-          Add a resume download or a concise overview of your experience here.
-        </p>
-      </div>
-    </section>
-
-    <footer class="site-footer" id="contact">
-      <span>&copy; <span id="year"></span> Tyler Nguyen</span>
-      <a href="#top">back to room</a>
-    </footer>
+      <footer class="site-footer">
+        <span>© <span id="year"></span> Tyler Nguyen</span>
+        <a href="#top">Back to top ↑</a>
+      </footer>
     </div>
 
     <script src="IntroVideo.js"></script>
