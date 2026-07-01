@@ -10,6 +10,7 @@ A lightweight vanilla HTML, CSS, and JavaScript portfolio starter.
 - `IntroVideo.css` - full-viewport video and fallback-button styling
 - `script.js` - intro integration and page-level behavior
 - `videos/portfolio-intro.mp4` - autoplay portfolio intro video
+- `audio/portfolio-intro.mp3` - intro sound synchronized at the one-second mark
 - `assets/` - placeholder visual assets
 
 Open `index.html` in a browser to view the site.

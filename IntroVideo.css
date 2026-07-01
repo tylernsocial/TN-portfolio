@@ -25,6 +25,34 @@ body.intro-active {
   object-fit: cover;
 }
 
+.intro-video__audio {
+  display: none;
+}
+
+.intro-video__sound {
+  position: absolute;
+  top: max(1rem, env(safe-area-inset-top));
+  right: max(1rem, env(safe-area-inset-right));
+  z-index: 1;
+  min-height: 2.5rem;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid rgb(255 255 255 / 65%);
+  border-radius: 999px;
+  background: rgb(0 0 0 / 68%);
+  color: #fff;
+  font: 600 0.78rem/1 Arial, sans-serif;
+  cursor: pointer;
+}
+
+.intro-video__sound:hover {
+  background: rgb(30 30 30 / 88%);
+}
+
+.intro-video__sound:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}
+
 .intro-video__enter {
   position: absolute;
   left: 50%;
