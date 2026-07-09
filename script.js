@@ -1,7 +1,4 @@
-const year = document.querySelector("#year");
 const portfolioContent = document.querySelector("#portfolio-content");
-
-year.textContent = new Date().getFullYear();
 
 // IntroVideo calls this page-owned callback when playback ends or the user skips.
 new IntroVideo({
