@@ -9,6 +9,9 @@ A lightweight vanilla HTML, CSS, and JavaScript portfolio with a video intro and
 - `IntroVideo.js` - reusable full-page video intro controller
 - `IntroVideo.css` - full-viewport video and fallback-button styling
 - `script.js` - intro integration and page-level behavior
+- `projects.html` - scrollable project showcase and reusable gallery markup
+- `projects.css` - projects page, gallery, and lightbox styling
+- `projects.js` - shared lightbox navigation and keyboard controls
 - `videos/portfolio-intro.mp4` - autoplay portfolio intro video
 - `audio/portfolio-intro.mp3` - intro sound synchronized at the one-second mark
 - `assets/favicon.svg` - site icon

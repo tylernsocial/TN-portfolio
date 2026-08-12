@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Selected data analysis and software projects by Tyler Nguyen."
+    >
+    <title>Projects | Tyler Nguyen</title>
+    <link rel="icon" href="assets/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects.css">
+  </head>
+  <body class="projects-page">
+    <header class="projects-header">
+      <a class="home-link" href="index.html" aria-label="Return to the portfolio home page">
+        <span aria-hidden="true">&larr;</span> Home
+      </a>
+      <span class="projects-monogram" aria-hidden="true">TN</span>
+    </header>
+
+    <main class="projects-main">
+      <header class="projects-intro">
+        <h1>Projects</h1>
+      </header>
+
+      <div class="project-list">
+        <!-- Duplicate this article to add another project. Give each gallery a unique data-gallery value. -->
+        <article class="project" aria-labelledby="video-game-sales-title">
+          <div class="project-content">
+            <header class="project-heading">
+              <h2 id="video-game-sales-title">Video Game Sales Analysis</h2>
+              <h3 id="video-game-sales-title">An End-to-End Data Analysis Project with Statistical and Machine Learning Methods</h3>
+              <p class="project-category">2026 <span aria-hidden="true">&middot;</span> Data Analysis <span aria-hidden="true">&middot;</span> Data Science</p>
+            </header>
+
+            <ul class="technology-list" aria-label="Technologies used">
+              <li>Python</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+              <li>Matplotlib</li>
+              <li>Seaborn</li>
+              <li>Scikit-learn</li>
+              <li>Jupyter Notebook</li>
+              <li>Excel</li>
+            </ul>
+
+            <p class="project-description">
+              An end-to-end analysis of 16,000+ historical video game sales records, exploring how genre, platform, publisher, release timing, and regional preferences shaped commercial performance. The project combines data cleaning, exploratory analysis, statistical comparisons, correlation analysis, and K-means clustering to uncover patterns in the video game market.
+            </p>
+
+            <div class="project-gallery" data-gallery="video-game-sales" aria-label="Video Game Sales Analysis screenshots">
+              <!-- Add another figure with the same data-gallery value to include it in this lightbox set. -->
+              <figure class="gallery-item">
+                <button
+                  class="gallery-button"
+                  type="button"
+                  data-gallery="video-game-sales"
+                  data-full="assets/data_an_proj/intro.webp"
+                  data-caption="Final report introduction and research questions"
+                  aria-label="Enlarge the final report introduction screenshot"
+                >
+                  <img
+                    src="assets/data_an_proj/intro.webp"
+                    alt="Introduction page from the Video Game Sales Analysis report"
+                    loading="lazy"
+                  >
+                </button>
+                <figcaption>Report introduction</figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <button
+                  class="gallery-button"
+                  type="button"
+                  data-gallery="video-game-sales"
+                  data-full="assets/data_an_proj/data_an.webp"
+                  data-caption="Genre performance analysis and supporting visualizations"
+                  aria-label="Enlarge the genre performance analysis screenshot"
+                >
+                  <img
+                    src="assets/data_an_proj/data_an.webp"
+                    alt="Genre performance charts and analysis from the Video Game Sales Analysis report"
+                    loading="lazy"
+                  >
+                </button>
+                <figcaption>Key analysis visualization</figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <button
+                  class="gallery-button"
+                  type="button"
+                  data-gallery="video-game-sales"
+                  data-full="assets/data_an_proj/kmeans.webp"
+                  data-caption="K-means elbow method and regional cluster profiles"
+                  aria-label="Enlarge the K-means clustering method screenshot"
+                >
+                  <img
+                    src="assets/data_an_proj/kmeans.webp"
+                    alt="K-means elbow method chart and regional cluster table"
+                    loading="lazy"
+                  >
+                </button>
+                <figcaption>Machine learning method</figcaption>
+              </figure>
+
+              <figure class="gallery-item">
+                <button
+                  class="gallery-button"
+                  type="button"
+                  data-gallery="video-game-sales"
+                  data-full="assets/data_an_proj/ml.webp"
+                  data-caption="Regional sales cluster visualizations and analysis"
+                  aria-label="Enlarge the machine learning results screenshot"
+                >
+                  <img
+                    src="assets/data_an_proj/ml.webp"
+                    alt="Regional sales cluster charts from the Video Game Sales Analysis report"
+                    loading="lazy"
+                  >
+                </button>
+                <figcaption>Machine learning results</figcaption>
+              </figure>
+            </div>
+            <div class="project-links" aria-label="Video Game Sales Analysis links">
+            <div class="project-links" aria-label="Video Game Sales Analysis links">
+              <h3
+            </div>
+              <a
+                href="assets/data_an_proj/final_report.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >View Full Report <span aria-hidden="true">&nearr;</span></a>
+              <!-- Replace this profile URL with the project's repository URL when it is available. -->
+              <a
+                href="https://github.com/tylernsocial"
+                target="_blank"
+                rel="noopener noreferrer"
+              >GitHub <span aria-hidden="true">&nearr;</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="projects-footer">
+      <span>Tyler Nguyen</span>
+      <a href="mailto:tylernsocial@gmail.com">tylernsocial@gmail.com</a>
+    </footer>
+
+    <div
+      class="lightbox"
+      id="project-lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="lightbox-caption"
+      hidden
+    >
+      <button class="lightbox-close" type="button" aria-label="Close image viewer">&times;</button>
+      <button class="lightbox-arrow lightbox-arrow--previous" type="button" aria-label="View previous image">
+        &larr;
+      </button>
+
+      <figure class="lightbox-content">
+        <img class="lightbox-image" src="" alt="">
+        <figcaption id="lightbox-caption" class="lightbox-caption"></figcaption>
+        <span class="lightbox-count" aria-live="polite"></span>
+      </figure>
+
+      <button class="lightbox-arrow lightbox-arrow--next" type="button" aria-label="View next image">
+        &rarr;
+      </button>
+    </div>
+
+    <script src="projects.js"></script>
+  </body>
+</html>
