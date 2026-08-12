@@ -1,5 +1,6 @@
 const lightbox = document.querySelector("#project-lightbox");
 const lightboxImage = lightbox?.querySelector(".lightbox-image");
+const lightboxVideo = lightbox?.querySelector(".lightbox-video");
 const lightboxCaption = lightbox?.querySelector(".lightbox-caption");
 const lightboxCount = lightbox?.querySelector(".lightbox-count");
 const closeButton = lightbox?.querySelector(".lightbox-close");
@@ -17,13 +18,31 @@ function galleryButtonsFor(button) {
   );
 }
 
-function renderActiveImage() {
+function renderActiveMedia() {
   const activeButton = activeGallery[activeIndex];
-  if (!activeButton || !lightboxImage || !lightboxCaption || !lightboxCount) return;
+  if (!activeButton || !lightboxImage || !lightboxVideo || !lightboxCaption || !lightboxCount) return;
 
   const thumbnail = activeButton.querySelector("img");
-  lightboxImage.src = activeButton.dataset.full || thumbnail?.src || "";
-  lightboxImage.alt = thumbnail?.alt || "Project screenshot";
+  const isVideo = activeButton.dataset.type === "video";
+
+  lightboxVideo.pause();
+
+  if (isVideo) {
+    lightboxImage.hidden = true;
+    lightboxImage.src = "";
+    lightboxImage.alt = "";
+    lightboxVideo.hidden = false;
+    lightboxVideo.src = activeButton.dataset.full || "";
+    lightboxVideo.load();
+  } else {
+    lightboxVideo.hidden = true;
+    lightboxVideo.removeAttribute("src");
+    lightboxVideo.load();
+    lightboxImage.hidden = false;
+    lightboxImage.src = activeButton.dataset.full || thumbnail?.src || "";
+    lightboxImage.alt = thumbnail?.alt || "Project screenshot";
+  }
+
   lightboxCaption.textContent = activeButton.dataset.caption || thumbnail?.alt || "";
   lightboxCount.textContent = `${activeIndex + 1} / ${activeGallery.length}`;
 
@@ -38,7 +57,7 @@ function openLightbox(button) {
   activeGallery = galleryButtonsFor(button);
   activeIndex = activeGallery.indexOf(button);
   triggerButton = button;
-  renderActiveImage();
+  renderActiveMedia();
 
   lightbox.hidden = false;
   document.body.classList.add("lightbox-open");
@@ -51,6 +70,9 @@ function closeLightbox() {
   lightbox.hidden = true;
   document.body.classList.remove("lightbox-open");
   lightboxImage.src = "";
+  lightboxVideo.pause();
+  lightboxVideo.removeAttribute("src");
+  lightboxVideo.load();
   triggerButton?.focus();
   triggerButton = null;
 }
@@ -58,7 +80,7 @@ function closeLightbox() {
 function showImage(offset) {
   if (!activeGallery.length) return;
   activeIndex = (activeIndex + offset + activeGallery.length) % activeGallery.length;
-  renderActiveImage();
+  renderActiveMedia();
 }
 
 document.querySelectorAll(".gallery-button").forEach((button) => {

@@ -207,6 +207,7 @@
   position: relative;
   display: block;
   width: 100%;
+  aspect-ratio: 613 / 790;
   padding: 0;
   border: 1px solid rgb(24 26 25 / 9%);
   border-radius: 2px;
@@ -218,17 +219,62 @@
 .gallery-button img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 613 / 790;
+  height: 100%;
   object-fit: cover;
   object-position: top;
   transition: opacity 160ms ease, transform 160ms ease;
 }
 
+.gallery-button > video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 160ms ease, transform 160ms ease;
+}
+
 .gallery-button:hover img,
-.gallery-button:focus-visible img {
+.gallery-button:focus-visible img,
+.gallery-button:hover > video,
+.gallery-button:focus-visible > video {
   opacity: 0.88;
   transform: scale(1.01);
+}
+
+.gallery-button--video {
+  background: rgb(24 26 25 / 5%);
+}
+
+.gallery-button--video > video {
+  position: absolute;
+  inset: 0;
+  aspect-ratio: auto;
+  object-position: center;
+}
+
+.video-play-indicator {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  place-items: center;
+  width: 2.8rem;
+  height: 2.8rem;
+  padding-left: 0.12rem;
+  border: 1px solid rgb(255 255 255 / 72%);
+  border-radius: 999px;
+  background: rgb(9 10 9 / 64%);
+  color: #fff;
+  font: 0.9rem/1 var(--mono);
+  transform: translate(-50%, -50%);
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.gallery-button--video:hover .video-play-indicator,
+.gallery-button--video:focus-visible .video-play-indicator {
+  background: rgb(9 10 9 / 78%);
+  transform: translate(-50%, -50%) scale(1.04);
 }
 
 .gallery-item figcaption {
@@ -238,13 +284,17 @@
   line-height: 1.45;
 }
 
-.project-github-note {
+.project-note {
   max-width: 56rem;
   margin: 1.75rem 0 0;
   color: rgb(24 26 25 / 70%);
   font-family: var(--mono);
   font-size: clamp(0.875rem, 1.2vw, 0.9375rem);
   line-height: 1.6;
+}
+
+.project-note--links {
+  margin-top: 0.6rem;
 }
 
 .project-links {
@@ -316,6 +366,24 @@ body.lightbox-open {
   border-radius: 3px;
   box-shadow: 0 1rem 4rem rgb(0 0 0 / 40%);
   object-fit: contain;
+}
+
+.lightbox-video {
+  display: block;
+  width: min(82vw, 68rem);
+  aspect-ratio: 1534 / 720;
+  max-width: 100%;
+  max-height: calc(100vh - 8.5rem);
+  max-height: calc(100dvh - 8.5rem);
+  border-radius: 3px;
+  box-shadow: 0 1rem 4rem rgb(0 0 0 / 40%);
+  background: #000;
+  object-fit: contain;
+}
+
+.lightbox-image[hidden],
+.lightbox-video[hidden] {
+  display: none;
 }
 
 .lightbox-caption {
@@ -446,6 +514,12 @@ body.lightbox-open {
     max-height: calc(100dvh - 10rem);
   }
 
+  .lightbox-video {
+    width: calc(100vw - 1.5rem);
+    max-height: calc(100vh - 10rem);
+    max-height: calc(100dvh - 10rem);
+  }
+
   .lightbox-arrow--previous,
   .lightbox-arrow--next {
     grid-row: 2;
@@ -468,6 +542,8 @@ body.lightbox-open {
   }
 
   .gallery-button img,
+  .gallery-button > video,
+  .video-play-indicator,
   .project-links a {
     transition-duration: 1ms;
   }
