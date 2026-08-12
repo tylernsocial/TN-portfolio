@@ -20,130 +20,142 @@
       <span class="projects-monogram" aria-hidden="true">TN</span>
     </header>
 
-    <main class="projects-main">
-      <header class="projects-intro">
-        <h1>Projects</h1>
-      </header>
+    <div class="projects-layout">
+      <aside class="projects-nav" aria-label="Portfolio navigation">
+        <nav>
+          <a href="index.html#about">about</a>
+          <a href="projects.html" aria-current="page">projects</a>
+          <a href="https://github.com/tylernsocial" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://www.linkedin.com/in/tyler-nguyen47/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="#">resume</a>
+        </nav>
+      </aside>
 
-      <div class="project-list">
-        <!-- Duplicate this article to add another project. Give each gallery a unique data-gallery value. -->
-        <article class="project" aria-labelledby="video-game-sales-title">
-          <div class="project-content">
-            <header class="project-heading">
-              <h2 id="video-game-sales-title">Video Game Sales Analysis</h2>
-              <h3 id="video-game-sales-title">An End-to-End Data Analysis Project with Statistical and Machine Learning Methods</h3>
-              <p class="project-category">2026 <span aria-hidden="true">&middot;</span> Data Analysis <span aria-hidden="true">&middot;</span> Data Science</p>
-            </header>
+      <main class="projects-main">
+        <header class="projects-intro">
+          <h1>Projects</h1>
+        </header>
 
-            <ul class="technology-list" aria-label="Technologies used">
-              <li>Python</li>
-              <li>NumPy</li>
-              <li>Pandas</li>
-              <li>Matplotlib</li>
-              <li>Seaborn</li>
-              <li>Scikit-learn</li>
-              <li>Jupyter Notebook</li>
-              <li>Excel</li>
-            </ul>
+        <div class="project-list">
+          <!-- Duplicate this article to add another project. Give each gallery a unique data-gallery value. -->
+          <article class="project" aria-labelledby="video-game-sales-title">
+            <div class="project-content">
+              <header class="project-heading">
+                <h2 id="video-game-sales-title">Video Game Sales Analysis</h2>
+                <h3>An End-to-End Data Analysis Project with Statistical and Machine Learning Methods</h3>
+                <p class="project-category">2026 <span aria-hidden="true">&middot;</span> Data Analysis <span aria-hidden="true">&middot;</span> Data Science <span aria-hidden="true">&middot;</span> Machine Learning</p>
+              </header>
 
-            <p class="project-description">
-              An end-to-end analysis of 16,000+ historical video game sales records, exploring how genre, platform, publisher, release timing, and regional preferences shaped commercial performance. The project combines data cleaning, exploratory analysis, statistical comparisons, correlation analysis, and K-means clustering to uncover patterns in the video game market.
-            </p>
+              <ul class="technology-list" aria-label="Technologies used">
+                <li>Python</li>
+                <li>NumPy</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>Scikit-learn</li>
+                <li>Jupyter Notebook</li>
+                <li>Excel</li>
+              </ul>
 
-            <div class="project-gallery" data-gallery="video-game-sales" aria-label="Video Game Sales Analysis screenshots">
-              <!-- Add another figure with the same data-gallery value to include it in this lightbox set. -->
-              <figure class="gallery-item">
-                <button
-                  class="gallery-button"
-                  type="button"
-                  data-gallery="video-game-sales"
-                  data-full="assets/data_an_proj/intro.webp"
-                  data-caption="Final report introduction and research questions"
-                  aria-label="Enlarge the final report introduction screenshot"
-                >
-                  <img
-                    src="assets/data_an_proj/intro.webp"
-                    alt="Introduction page from the Video Game Sales Analysis report"
-                    loading="lazy"
+              <p class="project-description">
+                An end-to-end analysis of 16,000+ historical video game sales records, exploring how genre, platform, publisher, release timing, and regional preferences shaped commercial performance. The project combines data cleaning, exploratory analysis, statistical comparisons, correlation analysis, and K-means clustering to uncover patterns in the video game market.
+              </p>
+
+              <div class="project-gallery" data-gallery="video-game-sales" aria-label="Video Game Sales Analysis screenshots">
+                <!-- Add another figure with the same data-gallery value to include it in this lightbox set. -->
+                <figure class="gallery-item">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-gallery="video-game-sales"
+                    data-full="assets/data_an_proj/intro.webp"
+                    data-caption="Final report introduction and research questions"
+                    aria-label="Enlarge the final report introduction screenshot"
                   >
-                </button>
-                <figcaption>Report introduction</figcaption>
-              </figure>
+                    <img
+                      src="assets/data_an_proj/intro.webp"
+                      alt="Introduction page from the Video Game Sales Analysis report"
+                      loading="lazy"
+                    >
+                  </button>
+                  <figcaption>Report introduction</figcaption>
+                </figure>
 
-              <figure class="gallery-item">
-                <button
-                  class="gallery-button"
-                  type="button"
-                  data-gallery="video-game-sales"
-                  data-full="assets/data_an_proj/data_an.webp"
-                  data-caption="Genre performance analysis and supporting visualizations"
-                  aria-label="Enlarge the genre performance analysis screenshot"
-                >
-                  <img
-                    src="assets/data_an_proj/data_an.webp"
-                    alt="Genre performance charts and analysis from the Video Game Sales Analysis report"
-                    loading="lazy"
+                <figure class="gallery-item">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-gallery="video-game-sales"
+                    data-full="assets/data_an_proj/data_an.webp"
+                    data-caption="Genre performance analysis and supporting visualizations"
+                    aria-label="Enlarge the genre performance analysis screenshot"
                   >
-                </button>
-                <figcaption>Key analysis visualization</figcaption>
-              </figure>
+                    <img
+                      src="assets/data_an_proj/data_an.webp"
+                      alt="Genre performance charts and analysis from the Video Game Sales Analysis report"
+                      loading="lazy"
+                    >
+                  </button>
+                  <figcaption>Key analysis visualization</figcaption>
+                </figure>
 
-              <figure class="gallery-item">
-                <button
-                  class="gallery-button"
-                  type="button"
-                  data-gallery="video-game-sales"
-                  data-full="assets/data_an_proj/kmeans.webp"
-                  data-caption="K-means elbow method and regional cluster profiles"
-                  aria-label="Enlarge the K-means clustering method screenshot"
-                >
-                  <img
-                    src="assets/data_an_proj/kmeans.webp"
-                    alt="K-means elbow method chart and regional cluster table"
-                    loading="lazy"
+                <figure class="gallery-item">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-gallery="video-game-sales"
+                    data-full="assets/data_an_proj/kmeans.webp"
+                    data-caption="K-means elbow method and regional cluster profiles"
+                    aria-label="Enlarge the K-means clustering method screenshot"
                   >
-                </button>
-                <figcaption>Machine learning method</figcaption>
-              </figure>
+                    <img
+                      src="assets/data_an_proj/kmeans.webp"
+                      alt="K-means elbow method chart and regional cluster table"
+                      loading="lazy"
+                    >
+                  </button>
+                  <figcaption>Machine learning method</figcaption>
+                </figure>
 
-              <figure class="gallery-item">
-                <button
-                  class="gallery-button"
-                  type="button"
-                  data-gallery="video-game-sales"
-                  data-full="assets/data_an_proj/ml.webp"
-                  data-caption="Regional sales cluster visualizations and analysis"
-                  aria-label="Enlarge the machine learning results screenshot"
-                >
-                  <img
-                    src="assets/data_an_proj/ml.webp"
-                    alt="Regional sales cluster charts from the Video Game Sales Analysis report"
-                    loading="lazy"
+                <figure class="gallery-item">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-gallery="video-game-sales"
+                    data-full="assets/data_an_proj/ml.webp"
+                    data-caption="Regional sales cluster visualizations and analysis"
+                    aria-label="Enlarge the machine learning results screenshot"
                   >
-                </button>
-                <figcaption>Machine learning results</figcaption>
-              </figure>
+                    <img
+                      src="assets/data_an_proj/ml.webp"
+                      alt="Regional sales cluster charts from the Video Game Sales Analysis report"
+                      loading="lazy"
+                    >
+                  </button>
+                  <figcaption>Machine learning results</figcaption>
+                </figure>
+              </div>
+
+              <p class="project-github-note">For the complete technical workflow, including additional visualizations and analysis, explore the Jupyter notebooks on GitHub.</p>
+
+              <div class="project-links" aria-label="Video Game Sales Analysis links">
+                <a
+                  href="assets/data_an_proj/final_report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >View Full Report <span aria-hidden="true">&nearr;</span></a>
+                <!-- Replace this profile URL with the project's repository URL when it is available. -->
+                <a
+                  href="https://github.com/tylernsocial/data-analysis-on-the-videogame-industry.git"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub <span aria-hidden="true">&nearr;</span></a>
+              </div>
             </div>
-            <div class="project-links" aria-label="Video Game Sales Analysis links">
-            <div class="project-links" aria-label="Video Game Sales Analysis links">
-              <h3
-            </div>
-              <a
-                href="assets/data_an_proj/final_report.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >View Full Report <span aria-hidden="true">&nearr;</span></a>
-              <!-- Replace this profile URL with the project's repository URL when it is available. -->
-              <a
-                href="https://github.com/tylernsocial"
-                target="_blank"
-                rel="noopener noreferrer"
-              >GitHub <span aria-hidden="true">&nearr;</span></a>
-            </div>
-          </div>
-        </article>
-      </div>
-    </main>
+          </article>
+        </div>
+      </main>
+    </div>
 
     <footer class="projects-footer">
       <span>Tyler Nguyen</span>
