@@ -12,6 +12,8 @@ A lightweight vanilla HTML, CSS, and JavaScript portfolio with a video intro and
 - `projects.html` - scrollable project showcase and reusable gallery markup
 - `projects.css` - projects page, gallery, and lightbox styling
 - `projects.js` - shared lightbox navigation and keyboard controls
+- `about.html` - professional background, technical skills, and interests
+- `about.css` - responsive About page typography and layout
 - `videos/portfolio-intro.mp4` - autoplay portfolio intro video
 - `audio/portfolio-intro.mp3` - intro sound synchronized at the one-second mark
 - `assets/favicon.svg` - site icon

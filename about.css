@@ -1,0 +1,88 @@
+.about-main {
+  max-width: 62rem;
+}
+
+.about-content {
+  width: 100%;
+}
+
+.about-section {
+  margin-top: clamp(3.75rem, 7vw, 5.5rem);
+}
+
+.about-section--intro {
+  margin-top: 0;
+}
+
+.about-content h1,
+.about-content h2,
+.about-skills dt {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.about-content h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3.6vw, 2.625rem);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1.08;
+}
+
+.about-content h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.about-content p,
+.about-skills dd {
+  max-width: 62rem;
+  color: rgb(24 26 25 / 78%);
+  font-family: var(--mono);
+  font-size: clamp(1.0625rem, 1.5vw, 1.1875rem);
+  line-height: 1.7;
+}
+
+.about-content p {
+  margin: 1.2rem 0 0;
+}
+
+.about-content p + p {
+  margin-top: 1rem;
+}
+
+.about-lede {
+  max-width: 60rem;
+}
+
+.about-skills {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(2rem, 4vw, 3rem) clamp(2rem, 5vw, 4rem);
+  margin: 1.75rem 0 0;
+}
+
+.about-skill-group {
+  min-width: 0;
+}
+
+.about-skills dt {
+  font-size: clamp(1.1rem, 1.8vw, 1.3rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.about-skills dd {
+  margin: 0.65rem 0 0;
+  font-size: clamp(0.9375rem, 1.35vw, 1rem);
+  line-height: 1.7;
+}
+
+@media (max-width: 680px) {
+  .about-skills {
+    grid-template-columns: 1fr;
+  }
+}
