@@ -24,7 +24,14 @@
       <aside class="projects-nav" aria-label="Portfolio navigation">
         <nav>
           <a href="index.html#about">about</a>
-          <a href="projects.html" aria-current="page">projects</a>
+          <div class="projects-nav-group">
+            <a href="projects.html" aria-current="page">projects</a>
+            <div class="projects-nav-submenu" aria-label="Jump to a project">
+              <a href="#video-game-sales">Video Game Sales Analysis</a>
+              <a href="#wellness-watch-acne">Wellness Watch Acne</a>
+              <a href="#digital-marketplace">Digital Marketplace</a>
+            </div>
+          </div>
           <a href="https://github.com/tylernsocial" target="_blank" rel="noopener noreferrer">github</a>
           <a href="https://www.linkedin.com/in/tyler-nguyen47/" target="_blank" rel="noopener noreferrer">linkedin</a>
           <a href="#">resume</a>
@@ -32,13 +39,9 @@
       </aside>
 
       <main class="projects-main">
-        <header class="projects-intro">
-          <h1>Projects</h1>
-        </header>
-
         <div class="project-list">
           <!-- Duplicate this article to add another project. Give each gallery a unique data-gallery value. -->
-          <article class="project" aria-labelledby="video-game-sales-title">
+          <article class="project" id="video-game-sales" aria-labelledby="video-game-sales-title">
             <div class="project-content">
               <header class="project-heading">
                 <h2 id="video-game-sales-title">Video Game Sales Analysis</h2>
@@ -154,7 +157,7 @@
             </div>
           </article>
 
-          <article class="project" aria-labelledby="wellness-watch-acne-title">
+          <article class="project" id="wellness-watch-acne" aria-labelledby="wellness-watch-acne-title">
             <div class="project-content">
               <header class="project-heading">
                 <h2 id="wellness-watch-acne-title">Wellness Watch Acne</h2>
@@ -281,6 +284,122 @@
                   target="_blank"
                   rel="noopener noreferrer"
                 >ML Classifier GitHub <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" id="digital-marketplace" aria-labelledby="digital-marketplace-title">
+            <div class="project-content">
+              <header class="project-heading">
+                <h2 id="digital-marketplace-title">Digital Marketplace</h2>
+                <h3>A Role-Based Clothing Marketplace with a Simulated Escrow Workflow</h3>
+                <p class="project-category"> December 2024 <span aria-hidden="true">&middot;</span> Full-Stack Development <span aria-hidden="true">&middot;</span> Relational Database Design <span aria-hidden="true">&middot;</span> Academic Collaboration</p>
+              </header>
+
+              <ul class="technology-list" aria-label="Technologies used">
+                <li>React 18</li>
+                <li>JavaScript</li>
+                <li>React Router</li>
+                <li>Axios</li>
+                <li>Node.js</li>
+                <li>Express.js</li>
+                <li>MySQL 8</li>
+                <li>SQL</li>
+                <li>REST API</li>
+                <li>MySQL Workbench</li>
+              </ul>
+
+              <p class="project-description">
+                This project addressed trust in peer-to-peer clothing transactions by introducing a middleman workflow that holds buyer funds until an order is received before releasing payment to the seller. We first designed the system through an EER diagram, relational model, HIPO diagram, and data-flow diagram, then translated those designs into a MySQL-backed web application with separate buyer, seller, and middleman workflows for listings, purchases, order tracking, transaction management, and fund release.
+              </p>
+
+              <div class="project-gallery" data-gallery="digital-marketplace" aria-label="Digital Marketplace database and system documentation">
+                <figure class="gallery-item">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-gallery="digital-marketplace"
+                    data-full="assets/dbproj/erd.png"
+                    data-caption="Enhanced entity-relationship diagram for the marketplace database"
+                    aria-label="Enlarge the Digital Marketplace EER diagram"
+                  >
+                    <img
+                      src="assets/dbproj/erd.png"
+                      alt="Enhanced entity-relationship diagram showing marketplace users, items, orders, payments, and transactions"
+                      loading="lazy"
+                    >
+                  </button>
+                  <figcaption>EER diagram</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-gallery="digital-marketplace"
+                    data-full="assets/dbproj/rm.png"
+                    data-caption="Relational model showing the implemented database tables and foreign-key relationships"
+                    aria-label="Enlarge the Digital Marketplace relational model"
+                  >
+                    <img
+                      src="assets/dbproj/rm.png"
+                      alt="Relational model for member, buyer, seller, item, order, payment, transaction, and middleman tables"
+                      loading="lazy"
+                    >
+                  </button>
+                  <figcaption>Relational model</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-gallery="digital-marketplace"
+                    data-full="assets/dbproj/example query.webp"
+                    data-caption="SQL query joining orders, items, buyers, and sellers with transaction status results"
+                    aria-label="Enlarge the example Digital Marketplace SQL query"
+                  >
+                    <img
+                      src="assets/dbproj/example query.webp"
+                      alt="MySQL query and result grid for marketplace orders, buyer and seller names, and fund-release states"
+                      loading="lazy"
+                    >
+                  </button>
+                  <figcaption>Order-state SQL query</figcaption>
+                </figure>
+
+                <figure class="gallery-item">
+                  <button
+                    class="gallery-button"
+                    type="button"
+                    data-gallery="digital-marketplace"
+                    data-full="assets/dbproj/user_manual.webp"
+                    data-caption="User manual walkthrough of buyer order tracking and middleman transaction moderation"
+                    aria-label="Enlarge the Digital Marketplace user manual preview"
+                  >
+                    <img
+                      src="assets/dbproj/user_manual.webp"
+                      alt="User manual pages showing buyer order history and the middleman moderation dashboard"
+                      loading="lazy"
+                    >
+                  </button>
+                  <figcaption>Role-based user walkthrough</figcaption>
+                </figure>
+              </div>
+
+              <p class="project-note">This application is an educational prototype. Its payment and escrow features simulate a transaction workflow and do not process or transfer real money. For the complete development workflow, additional system diagrams, and full application walkthrough, view the linked User Manual.</p>
+
+              <div class="project-links" aria-label="Digital Marketplace links">
+                <a
+                  href="assets/dbproj/diagrams_and_user_manual.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >Diagrams &amp; User Manual <span aria-hidden="true">&nearr;</span></a>
+                <a
+                  href="https://github.com/tylernsocial/digitalmarketplace"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >GitHub <span aria-hidden="true">&nearr;</span></a>
               </div>
             </div>
           </article>

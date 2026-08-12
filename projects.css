@@ -58,7 +58,7 @@
 
 .projects-layout {
   display: grid;
-  grid-template-columns: 8.5rem minmax(0, 1fr);
+  grid-template-columns: 10.5rem minmax(0, 1fr);
   gap: clamp(2.5rem, 5vw, 5rem);
 }
 
@@ -101,6 +101,35 @@
   text-underline-offset: 0.38em;
 }
 
+.projects-nav-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.projects-nav-submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding-left: 0.8rem;
+}
+
+.projects-nav .projects-nav-submenu a {
+  color: rgb(24 26 25 / 54%);
+  font-size: 0.78rem;
+  line-height: 1.4;
+  text-transform: none;
+}
+
+.projects-nav .projects-nav-submenu a:hover,
+.projects-nav .projects-nav-submenu a:focus-visible {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
 .projects-main {
   display: block;
   width: 100%;
@@ -110,21 +139,8 @@
   padding: clamp(2.75rem, 6vw, 4.75rem) 0 clamp(4rem, 8vw, 6rem);
 }
 
-.projects-intro {
-  margin-bottom: clamp(3rem, 6vw, 4.5rem);
-}
-
-.projects-intro h1 {
-  margin: 0;
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.25rem, 2vw, 1.5rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.2;
-}
-
 .project {
+  scroll-margin-top: 2rem;
   margin-bottom: clamp(4.5rem, 8vw, 6.75rem);
 }
 
@@ -479,9 +495,34 @@ body.lightbox-open {
   }
 
   .projects-nav nav {
+    align-items: center;
     flex-direction: row;
     gap: 1.25rem;
     width: max-content;
+  }
+
+  .projects-nav-group,
+  .projects-nav-submenu {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .projects-nav-group {
+    gap: 1rem;
+  }
+
+  .projects-nav-submenu {
+    gap: 1rem;
+    padding-left: 0;
+  }
+
+  .projects-nav .projects-nav-submenu a {
+    font-size: 0.78rem;
+    white-space: nowrap;
+  }
+
+  .project {
+    scroll-margin-top: 5rem;
   }
 
   .project-gallery {
