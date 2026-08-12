@@ -225,6 +225,14 @@
   transition: opacity 160ms ease, transform 160ms ease;
 }
 
+.gallery-button img.gallery-image--focus-classifier {
+  object-position: 18% top;
+}
+
+.gallery-button img.gallery-image--focus-logger {
+  object-position: 78% top;
+}
+
 .gallery-button > video {
   display: block;
   width: 100%;
