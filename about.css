@@ -81,8 +81,33 @@
   line-height: 1.7;
 }
 
+.coursework-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem clamp(2rem, 5vw, 4rem);
+  margin: 1.75rem 0 0;
+  padding: 0;
+  color: rgb(24 26 25 / 78%);
+  font-family: var(--mono);
+  font-size: clamp(0.9375rem, 1.35vw, 1rem);
+  line-height: 1.55;
+  list-style: none;
+}
+
+.coursework-list li {
+  min-width: 0;
+}
+
+.course-code {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--ink);
+  font-weight: 700;
+}
+
 @media (max-width: 680px) {
-  .about-skills {
+  .about-skills,
+  .coursework-list {
     grid-template-columns: 1fr;
   }
 }
