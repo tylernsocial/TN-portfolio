@@ -4,21 +4,12 @@
   font-family: var(--mono);
 }
 
-.projects-header,
 .projects-footer,
 .projects-layout {
   width: min(100% - 2rem, 78rem);
   margin-inline: auto;
 }
 
-.projects-header {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  padding-block: clamp(1.25rem, 3vw, 2rem);
-}
-
-.home-link,
 .projects-footer,
 .project-category,
 .technology-list,
@@ -27,33 +18,18 @@
   font-family: var(--mono);
 }
 
-.home-link {
-  font-size: clamp(0.9375rem, 1.3vw, 1rem);
-  text-transform: lowercase;
-}
-
-.home-link:hover,
-.home-link:focus-visible,
 .projects-footer a:hover,
 .projects-footer a:focus-visible {
   text-decoration: underline;
   text-underline-offset: 0.18em;
 }
 
-.home-link:focus-visible,
 .projects-footer a:focus-visible,
 .project-links a:focus-visible,
 .gallery-button:focus-visible,
 .lightbox button:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 4px;
-}
-
-.projects-monogram {
-  color: rgb(24 26 25 / 76%);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 1.6rem;
-  font-weight: 600;
 }
 
 .projects-layout {
@@ -531,7 +507,6 @@ body.lightbox-open {
 }
 
 @media (max-width: 520px) {
-  .projects-header,
   .projects-footer,
   .projects-layout {
     width: min(100% - 1.5rem, 78rem);
